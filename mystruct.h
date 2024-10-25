@@ -8,17 +8,17 @@
 #include <sstream>
 #include <vector>
 
-class BilfWire;
-class BilfElaborate;
+class blifWire;
+class blifElaborate;
 
 
 using namespace std;
 
 
-class BilfWire
+class blifWire
 {
 public:
-    BilfWire();
+    blifWire();
     void setOutput(const string& outPutName);
     string getOutput(); //获取输出端口名
 
@@ -37,24 +37,24 @@ private:
     vector<vector<char>> logical;
 };
 
-class BilfElaborate
+class blifElaborate
 {
 public:
-    BilfElaborate();
+    blifElaborate();
     void setFileName(const string& filename);
     string getFileName();
     void setInput(const string& inputName);
     void setOutput(const string& outputName);
     void setWire(const string& wireName);
-    void BilfElaborateRead();  // 解析
-    void Bilf2Verilog();   //输出
+    void blifElaborateRead();  // 解析
+    void blif2Verilog();   //输出
 
 private:
-    string fileName; //该bilf文件名称
-    vector<BilfWire> myBilfWires;//存储所有的连接关系的数据结构
-    vector<string> output; //bilf中的输出端口
-    vector<string> input; //bilf中的输入端口
-    vector<string> wire; //bilf中的端口
+    string fileName; //该blif文件名称
+    vector<blifWire> myblifWires;//存储所有的连接关系的数据结构
+    vector<string> output; //blif中的输出端口
+    vector<string> input; //blif中的输入端口
+    vector<string> wire; //blif中的端口
     ifstream file;
 };
 

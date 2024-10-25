@@ -4,9 +4,9 @@
 using namespace std;
 
 int main() {
-	BilfElaborate myBilf;
-	myBilf.BilfElaborateRead();
-	myBilf.Bilf2Verilog();
+	blifElaborate myblif;
+	myblif.blifElaborateRead();
+	myblif.blif2Verilog();
 	return 0;
 }
 
